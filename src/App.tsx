@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import QuoteCard from './components/QuoteCard';
 import Button from './components/Button';
