@@ -1,0 +1,144 @@
+.quote-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.quote-category {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.quote-text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 25px 0;
+  font-style: italic;
+  position: relative;
+}
+
+.quote-text::before {
+  content: '"';
+  font-size: 4rem;
+  color: #667eea;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  opacity: 0.3;
+  font-family: serif;
+}
+
+.quote-text::after {
+  content: '"';
+  font-size: 4rem;
+  color: #667eea;
+  position: absolute;
+  bottom: -40px;
+  right: -10px;
+  opacity: 0.3;
+  font-family: serif;
+}
+
+.quote-author {
+  display: block;
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-style: normal;
+}
+
+.share-button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.share-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.share-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .quote-card {
+    padding: 30px 25px;
+    margin: 15px 0;
+  }
+  
+  .quote-text {
+    font-size: 1.3rem;
+  }
+  
+  .quote-text::before,
+  .quote-text::after {
+    font-size: 3rem;
+  }
+  
+  .quote-text::before {
+    top: -15px;
+    left: -5px;
+  }
+  
+  .quote-text::after {
+    bottom: -30px;
+    right: -5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-card {
+    padding: 25px 20px;
+    margin: 10px 0;
+  }
+  
+  .quote-text {
+    font-size: 1.2rem;
+  }
+  
+  .quote-category {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+  
+  .quote-author {
+    font-size: 1rem;
+  }
+  
+  .share-button {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}
